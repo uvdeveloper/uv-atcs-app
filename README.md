@@ -7,9 +7,9 @@
 
 ## Install the following required dependencies if required using pip 
 
-1.shutil
-2.requests
-3.numpy
+1. shutil
+2. requests
+3. numpy
 
 ## Command to run the project 
    
