@@ -1,0 +1,14 @@
+
+CAR
+		Recall : 84.3%  Precision : 90.0%   Average Precision : 84.3%
+
+BUS
+		Recall : 100.%  Precision : 100.%   Average Precision : 100.%
+
+BIKE
+		Recall : 77.1%  Precision : 96.3%   Average Precision : 76.8%
+
+AUTO
+		Recall : 95.5%  Precision : 100.%   Average Precision : 95.5%
+
+TEMPO not found
