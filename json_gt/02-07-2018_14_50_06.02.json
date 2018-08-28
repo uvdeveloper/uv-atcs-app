@@ -1,0 +1,77 @@
+{
+    "contributors": [
+        "Shwetha"
+    ], 
+    "database": "Unknown", 
+    "filename": "02-07-2018_14_50_06.02.jpg", 
+    "height": 960, 
+    "width": 1280, 
+    "depth": 1, 
+    "version": "Everest-v4.8", 
+    "bbox": [
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BUS": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 1, 
+                "ymin": 178, 
+                "ymax": 530, 
+                "xmax": 676
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 783, 
+                "ymin": 538, 
+                "ymax": 774, 
+                "xmax": 1184
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "AUTO": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 267, 
+                "ymin": 583, 
+                "ymax": 741, 
+                "xmax": 552
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 1, 
+                "ymin": 507, 
+                "ymax": 610, 
+                "xmax": 53
+            }, 
+            "difficult": 0
+        }
+    ], 
+    "path": "/home/uncanny/1_shwetha/ATCS/3_day/site2/img/02-07-2018_14_50_06.02.jpg", 
+    "folder": "img", 
+    "foldername": "img", 
+    "points": []
+}

@@ -1,0 +1,167 @@
+{
+    "contributors": [
+        "Shwetha"
+    ], 
+    "database": "Unknown", 
+    "filename": "02-07-2018_14_50_10.03.jpg", 
+    "height": 960, 
+    "width": 1280, 
+    "depth": 1, 
+    "version": "Everest-v4.8", 
+    "bbox": [
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 39, 
+                "ymin": 360, 
+                "ymax": 463, 
+                "xmax": 183
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 48, 
+                "ymin": 500, 
+                "ymax": 643, 
+                "xmax": 237
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "AUTO": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 414, 
+                "ymin": 291, 
+                "ymax": 465, 
+                "xmax": 659
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 2, 
+                "ymin": 372, 
+                "ymax": 420, 
+                "xmax": 44
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 97, 
+                "ymin": 442, 
+                "ymax": 508, 
+                "xmax": 193
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 420, 
+                "ymin": 460, 
+                "ymax": 561, 
+                "xmax": 600
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 502, 
+                "ymin": 641, 
+                "ymax": 747, 
+                "xmax": 719
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 783, 
+                "ymin": 491, 
+                "ymax": 616, 
+                "xmax": 998
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 837, 
+                "ymin": 332, 
+                "ymax": 452, 
+                "xmax": 1009
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 1219, 
+                "ymin": 521, 
+                "ymax": 741, 
+                "xmax": 1280
+            }, 
+            "difficult": 0
+        }
+    ], 
+    "path": "/home/uncanny/1_shwetha/ATCS/3_day/site2/img/02-07-2018_14_50_10.03.jpg", 
+    "folder": "img", 
+    "foldername": "img", 
+    "points": []
+}

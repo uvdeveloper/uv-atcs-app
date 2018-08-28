@@ -1,0 +1,122 @@
+{
+    "contributors": [
+        "Sandeep"
+    ], 
+    "database": "Unknown", 
+    "filename": "02-07-2018_14_50_21.02.jpg", 
+    "height": 960, 
+    "width": 1280, 
+    "depth": 1, 
+    "version": "Everest-v4.8", 
+    "bbox": [
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 919, 
+                "ymin": 480, 
+                "ymax": 748, 
+                "xmax": 1280
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 986, 
+                "ymin": 299, 
+                "ymax": 426, 
+                "xmax": 1151
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 624, 
+                "ymin": 252, 
+                "ymax": 391, 
+                "xmax": 867
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "AUTO": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 382, 
+                "ymin": 386, 
+                "ymax": 564, 
+                "xmax": 650
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 262, 
+                "ymin": 333, 
+                "ymax": 449, 
+                "xmax": 396
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 152, 
+                "ymin": 327, 
+                "ymax": 409, 
+                "xmax": 256
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 59, 
+                "ymin": 537, 
+                "ymax": 626, 
+                "xmax": 182
+            }, 
+            "difficult": 0
+        }
+    ], 
+    "path": "/home/uncanny/ATCS_sandeep/3/site2/Images/02-07-2018_14_50_21.02.jpg", 
+    "folder": "Images", 
+    "foldername": "Images", 
+    "points": []
+}

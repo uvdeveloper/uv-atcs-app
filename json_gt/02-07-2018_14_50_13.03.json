@@ -1,0 +1,107 @@
+{
+    "contributors": [
+        "Shwetha"
+    ], 
+    "database": "Unknown", 
+    "filename": "02-07-2018_14_50_13.03.jpg", 
+    "height": 960, 
+    "width": 1280, 
+    "depth": 1, 
+    "version": "Everest-v4.8", 
+    "bbox": [
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 402, 
+                "ymin": 529, 
+                "ymax": 761, 
+                "xmax": 874
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 588, 
+                "ymin": 272, 
+                "ymax": 476, 
+                "xmax": 1016
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "AUTO": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 68, 
+                "ymin": 464, 
+                "ymax": 604, 
+                "xmax": 279
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "AUTO": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 79, 
+                "ymin": 361, 
+                "ymax": 463, 
+                "xmax": 219
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 342, 
+                "ymin": 346, 
+                "ymax": 442, 
+                "xmax": 528
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 279, 
+                "ymin": 300, 
+                "ymax": 378, 
+                "xmax": 387
+            }, 
+            "difficult": 0
+        }
+    ], 
+    "path": "/home/uncanny/1_shwetha/ATCS/3_day/site2/img/02-07-2018_14_50_13.03.jpg", 
+    "folder": "img", 
+    "foldername": "img", 
+    "points": []
+}

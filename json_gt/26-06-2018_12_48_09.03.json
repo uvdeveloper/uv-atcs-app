@@ -1,0 +1,167 @@
+{
+    "contributors": [
+        "Shiva Prakash"
+    ], 
+    "database": "Unknown", 
+    "filename": "26-06-2018_12_48_09.03.jpg", 
+    "height": 960, 
+    "width": 1280, 
+    "depth": 1, 
+    "version": "Everest-v4.8", 
+    "bbox": [
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 368, 
+                "ymin": 731, 
+                "ymax": 816, 
+                "xmax": 553
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 139, 
+                "ymin": 490, 
+                "ymax": 545, 
+                "xmax": 236
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 78, 
+                "ymin": 537, 
+                "ymax": 585, 
+                "xmax": 152
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 99, 
+                "ymin": 457, 
+                "ymax": 511, 
+                "xmax": 168
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 41, 
+                "ymin": 463, 
+                "ymax": 508, 
+                "xmax": 100
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 138, 
+                "ymin": 612, 
+                "ymax": 739, 
+                "xmax": 323
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 1015, 
+                "ymin": 603, 
+                "ymax": 864, 
+                "xmax": 1280
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 59, 
+                "ymin": 594, 
+                "ymax": 695, 
+                "xmax": 154
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 7, 
+                "ymin": 545, 
+                "ymax": 621, 
+                "xmax": 87
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BUS": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 251, 
+                "ymin": 51, 
+                "ymax": 552, 
+                "xmax": 1280
+            }, 
+            "difficult": 0
+        }
+    ], 
+    "path": "/home/uncanny/DATABASE/acts/Images/26-06-2018_12_48_09.03.jpg", 
+    "folder": "Images", 
+    "foldername": "Images", 
+    "points": []
+}

@@ -1,0 +1,122 @@
+{
+    "contributors": [
+        "Shwetha"
+    ], 
+    "database": "Unknown", 
+    "filename": "02-07-2018_14_50_13.01.jpg", 
+    "height": 960, 
+    "width": 1280, 
+    "depth": 1, 
+    "version": "Everest-v4.8", 
+    "bbox": [
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 461, 
+                "ymin": 277, 
+                "ymax": 471, 
+                "xmax": 871
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 262, 
+                "ymin": 528, 
+                "ymax": 745, 
+                "xmax": 665
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "CAR": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 1166, 
+                "ymin": 504, 
+                "ymax": 721, 
+                "xmax": 1280
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "AUTO": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 22, 
+                "ymin": 465, 
+                "ymax": 594, 
+                "xmax": 197
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "AUTO": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 52, 
+                "ymin": 369, 
+                "ymax": 463, 
+                "xmax": 172
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 255, 
+                "ymin": 356, 
+                "ymax": 452, 
+                "xmax": 419
+            }, 
+            "difficult": 0
+        }, 
+        {
+            "attributes": {
+                "MT-Names": {
+                    "BIKE": {}
+                }
+            }, 
+            "name": "MT", 
+            "coordinates": {
+                "xmin": 218, 
+                "ymin": 313, 
+                "ymax": 386, 
+                "xmax": 324
+            }, 
+            "difficult": 0
+        }
+    ], 
+    "path": "/home/uncanny/1_shwetha/ATCS/3_day/site2/img/02-07-2018_14_50_13.01.jpg", 
+    "folder": "img", 
+    "foldername": "img", 
+    "points": []
+}

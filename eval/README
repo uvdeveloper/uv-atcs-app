@@ -1,0 +1,211 @@
+voc_eval.py script is used to evaluate recall,precision and average precision values based on the metrics defined in pascal voc challenge.
+
+python voc_eval.py -detpath [PATH to directory containing prediction text files] 
+		   -annopath [PATH to directory containing annotation files(jsons)]
+                   -imagesetfile [Text file containing names(not path)of images]
+                   -class_id [ID of the class is passed internally. If you want to only evaluate for one class you can pass the id of it in the argument]
+                   -names_file [Text file path containing the names of classes]
+
+In detpath,annopath the files should be same name as image names.
+
+Names file[names.txt] (last argument to the fn) is the names of classes in your ground truth.In my case there are 6 classes:
+
+	CAR
+	BUS
+	..
+	..
+	..
+
+Prediciton text file should be generated per image and each detection should be seperated by new line in that text file
+	
+    Format:	Class ID Confidence XMIN YMIN XMAX YMAX	
+    Eg:		5 	 0.69 	    176  125  275  196
+
+
+
+
+
+OUTPUT : "results.txt" having all the precision,recall values per class
+
+***Changes to be made in two functions of darknet to generate prediction text files
+***The images that you pass in darknet should be in folder name "images". 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) examples/detector.c 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filename, float thresh, float hier_thresh, char *outfile, int fullscreen)
+{
+    list *options = read_data_cfg(datacfg);
+    char *name_list = option_find_str(options, "names", "data/names.list");
+    char **names = get_labels(name_list);
+
+    image **alphabet = load_alphabet();
+    network *net = load_network(cfgfile, weightfile, 0);
+    set_batch_network(net, 1);
+    srand(2222222);
+    double time;
+    char buff[256];
+    char *input = buff;
+    float nms=.2;
+    int textcount = 0;
+    while(1){
+        if(filename){
+            strncpy(input, filename, 256);
+        } else {
+            printf("Enter Image Path: ");
+            fflush(stdout);
+            input = fgets(input, 256, stdin);
+            if(!input) return;
+            strtok(input, "\n");
+            textcount = textcount + 1;
+            
+        }
+        image im = load_image_color(input,0,0);
+        image sized = letterbox_image(im, net->w, net->h);
+        //strtok(input,".");
+        char* outText = replace_str(input, "images", "texts",0);
+        char* outText1 = replace_str(outText, "jpg", "txt",0);
+        char textName[2048];
+        //char outText[2048] = "/home/deepak/Videos/Projects/ATCS/Tiny_Yolo_Training/out/";
+        sprintf(textName, "%s", outText1);
+        printf("Text name  %s\n", textName);
+        //image sized = resize_image(im, net->w, net->h);
+        //image sized2 = resize_max(im, net->w);
+        //image sized = crop_image(sized2, -((net->w - sized2.w)/2), -((net->h - sized2.h)/2), net->w, net->h);
+        //resize_network(net, sized.w, sized.h);
+        layer l = net->layers[net->n-1];
+
+
+        float *X = sized.data;
+        time=what_time_is_it_now();
+        network_predict(net, X);
+        
+        printf("%s: Predicted in %f seconds.\n", input, what_time_is_it_now()-time);
+        int nboxes = 0;
+        //printf("Before get network boxes ");
+        detection *dets = get_network_boxes(net, im.w, im.h, thresh, hier_thresh, 0, 1, &nboxes);
+        //printf("Before draw detections");
+        //printf("%d\n", nboxes);
+        //if (nms) do_nms_obj(boxes, probs, l.w*l.h*l.n, l.classes, nms);
+        if (nms) do_nms_sort(dets, nboxes, l.classes, nms);
+        draw_detections(im, dets, nboxes, thresh, names, alphabet, l.classes,textName);
+        //printf("After draw detections");
+        free_detections(dets, nboxes);
+        if(outfile){
+            save_image(im, outfile);
+        }
+        else{
+            save_image(im, "predictions");
+#ifdef OPENCV
+            cvNamedWindow("predictions", CV_WINDOW_NORMAL); 
+            if(fullscreen){
+                cvSetWindowProperty("predictions", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+            }
+            show_image(im, "predictions");
+            cvWaitKey(0);
+            cvDestroyAllWindows();
+#endif
+        }
+
+        free_image(im);
+        free_image(sized);
+        if (filename) break;
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+2) src/image.c
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+void draw_detections(image im, detection *dets, int num, float thresh, char **names, image **alphabet, int classes,char **textName)
+{
+    int i,j;
+    FILE *f = fopen(textName, "w");
+    char line[255];
+    fc = fc + 1;
+    for(i = 0; i < num; ++i){
+        
+        char labelstr[4096] = {0};
+        int class = -1;
+        for(j = 0; j < classes; ++j){
+            if (dets[i].prob[j] > thresh){
+                if (class < 0) {
+                    strcat(labelstr, names[j]);
+                    class = j;
+                } else {
+                    strcat(labelstr, ", ");
+                    strcat(labelstr, names[j]);
+                }
+                printf("%s: %.0f%%\n", names[j], dets[i].prob[j]*100);
+                
+            }
+        }
+        if(class >= 0){
+            int width = im.h * .006;
+            //int class = max_index(probs[i], classes);
+            //int class = max_index(dets[i].prob[class], classes);
+            /*
+               if(0){
+               width = pow(prob, 1./2.)*10+1;
+               alphabet = 0;
+               }
+             */
+
+            //int class = max_index(probs[i], classes);
+            
+            int offset = class*123457 % classes;
+            float red = get_color(2,offset,classes);
+            float green = get_color(1,offset,classes);
+            float blue = get_color(0,offset,classes);
+            float rgb[3];
+
+            //width = prob*20+2;
+
+            rgb[0] = red;
+            rgb[1] = green;
+            rgb[2] = blue;
+            box b = dets[i].bbox;
+            //printf("%f %f %f %f\n", b.x, b.y, b.w, b.h);
+
+            int left  = (b.x-b.w/2.)*im.w;
+            int right = (b.x+b.w/2.)*im.w;
+            int top   = (b.y-b.h/2.)*im.h;
+            int bot   = (b.y+b.h/2.)*im.h;
+
+            if(left < 0) left = 0;
+            if(right > im.w-1) right = im.w-1;
+            if(top < 0) top = 0;
+            if(bot > im.h-1) bot = im.h-1;
+            
+            /* close the file*/
+            
+            draw_box_width(im, left, top, right, bot, width, red, green, blue);
+            
+            //Image-ID Class Confidence Left Top Right Bottom
+            //fprintf(f,"%d %d %0.2f %d %d %d %d\n",fc,class, dets[i].prob[class],left, top, right, bot);
+            
+            //Class ID, Confidence, Xmin ,Ymin, Xmax, Ymax
+            fprintf(f,"%d %0.2f %d %d %d %d\n",class, dets[i].prob[class],left, top, right, bot);
+            
+            if (alphabet) {
+                image label = get_label(alphabet, labelstr, (im.h*.03));
+                draw_label(im, top + width, left, label, rgb);
+                free_image(label);
+            }
+            if (dets[i].mask){
+                image mask = float_to_image(14, 14, 1, dets[i].mask);
+                image resized_mask = resize_image(mask, b.w*im.w, b.h*im.h);
+                image tmask = threshold_image(resized_mask, .5);
+                embed_image(tmask, im, left, top);
+                free_image(mask);
+                free_image(resized_mask);
+                free_image(tmask);
+            }
+        }
+    }
+    fclose(f);
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
