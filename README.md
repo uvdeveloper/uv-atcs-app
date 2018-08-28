@@ -18,6 +18,6 @@
 demo.mp4 shows the flow of the project
 The input images should be in the "images/" folder
 
-![alt text](https://github.com/uvdeveloper/ "Output Values on terminal after running the script")
+![Output Values on terminal after running the script](https://github.com/uvdeveloper/uv-atcs-app/blob/master/result_command_line.png "")
 
 If you encounter any problem, please contact deval@uncannyvision.com
