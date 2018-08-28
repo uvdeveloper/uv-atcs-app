@@ -16,7 +16,8 @@
    ```python uv-atcs.py```
 
 demo.mp4 shows the flow of the project
-The input images should be in the "images/" folder
+
+The demo input images are in the "images/" folder for testing the script. You can test the model using your own images and corresponding json ground truths in json_gt folder.  
 
 ![Output Values on terminal after running the script](https://github.com/uvdeveloper/uv-atcs-app/blob/master/result_command_line.png "")
 
